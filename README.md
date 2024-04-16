@@ -15,7 +15,7 @@ $T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0
 
 **Given this definition for big O, we need to be able to prove that $O(\log_{2} n)$ is the same as $O(\log_{5} n)$.**
 
-**This means that we must find constants c_1 and c_2 as well as n_0 such that $(\log_{2} n) \leq c_1 * (\log_{5} n) \forall n\geq n_0$**
+**This means that we must find constants $c_1$ and $c_2$ as well as $n_0$ such that $(\log_{2} n) \leq c_1 * (\log_{5} n) \forall n\geq n_0$**
 **and**
 **$(\log_{5} n) \leq c_2 * (\log_{2} n) \forall n\geq n_0$**
 
