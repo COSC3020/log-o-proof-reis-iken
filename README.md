@@ -21,10 +21,10 @@ $T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0
 
 **In the first inequality $(\log_{2} n) \leq c_1 * (\log_{5} n)$ we can take the log of both sides and then simplify to get:**
 
-**$n^(\log_{2} 5) \geq c_1$**
+**$n^{\log_{2} 5} \geq c_1$**
 
 **And in the second inequality $(\log_{5} n) \leq c_2 * (\log_{2} n)$ we can once again take the log of both sides and then simplify to get:**
 
-**$n^(\log_{5} 2) \geq c_2$**
+**$n^{\log_{5} 2} \geq c_2$**
 
 **Since the left sides of both inequalities are increasing functions with respect to n, then we can choose $n_0$ = 1 as well as positive values for $c_1$ and $c_2$ that make the inequalities true for all n $\geq n_0$**
