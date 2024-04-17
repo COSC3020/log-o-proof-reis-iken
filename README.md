@@ -15,16 +15,24 @@ $T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0
 
 **Given this definition for big O, we need to be able to prove that $O(\log_{2} n)$ is the same as $O(\log_{5} n)$.**
 
-**This means that for $T(n) \in O(\log_{2} n)$, $\exists$ constants $c_1$ and $c_2$ as well as $n_0$ such that $T(n) \leq c_1 * (\log_{5} n) \forall n\geq n_0$**
-**and**
-**$T(n) \leq c_2 * (\log_{2} n) \forall n\geq n_0$**
+**First, we must prove that $O(\log_{2} n) \subset O(\log_{5} n)$**
 
-**For the first condition, $T(n) \leq c_1 * (\log_{5} n) \forall n\geq n_0$ , we can use the log base change formula, which is $\log_{a} b = (\log_{c} b)/(\log_{c} a)$ to get that $\log_{5} n = (\log_{2} n)/(\log_{2} 5)$**
+**This means that for $T(n) \in O(\log_{2} n)$, $\exists$ a constant $c_1$ as well as $n_0$ such that $T(n) \leq c_1 * (\log_{5} n) \forall n\geq n_0$**
 
-**We know that $\log_{2} 5$ is a constant, so we can let $c_1$ = $(c')/(\log_{2} 5)$ and we can let $n_0 = n'_0$, and this makes the first inequality true.**
+**For this condition, $T(n) \leq c_1 * (\log_{5} n) \forall n\geq n_0$ , we can use the log base change formula, which is $\log_{a} b = (\log_{c} b)/(\log_{c} a)$ to get that $\log_{5} n = (\log_{2} n)/(\log_{2} 5)$**
+
+**We know that $\log_{2} 5$ is a constant, so we can let $c_1$ = $(c')/(\log_{2} 5)$ and we can let $n_0 = n'_0$, and this makes the inequality true.**
+
+**Since our condition is met, we can conclude that $O(\log_{2} n) \subset O(\log_{5} n)$.**
+
+**Next, we must prove that $O(\log_{5} n) \subset O(\log_{2} n)$**
+
+**This means that for $T(n) \in O(\log_{5} n)$, $\exists$ a constant $c_2$ as well as $n_0$ such that $T(n) \leq c_2 * (\log_{2} n) \forall n\geq n_0$**
 
 **Now, we can use the same log base change formula for the second condition to get that $\log_{2} n = (\log_{5} n)/(\log_{5} 2)$**
 
 **Once again, we know that $\log_{5} 2$ is a constant, so we can let $c_2$ = $c'' * \log_{5} 2$ and $n_0 = n''_0$, and this makes the second inequality true.**
 
-**Since our conditions are met, we can conclude that $O(\log_{2} n)$ is the same as $O(\log_{5} n)$.**
+**Since this condition is met, we can conclude that $O(\log_{5} n) \subset O(\log_{2} n)$**
+
+**Now that we have shown that $O(\log_{2} n) \subset O(\log_{5} n)$ and $O(\log_{5} n) \subset O(\log_{2} n)$ , we can conclude that $O(\log_{2} n)$ is the same as $O(\log_{5} n)$.**
