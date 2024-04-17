@@ -15,9 +15,17 @@ $T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0
 
 **Given this definition for big O, we need to be able to prove that $O(\log_{2} n)$ is the same as $O(\log_{5} n)$.**
 
-**This means that for $T(n) \in O(\log{2} n)$, $\exists$ constants $c_1$ and $c_2$ as well as $n_0$ such that $(\log_{2} n) \leq c_1 * (\log_{5} n) \forall n\geq n_0$**
+**This means that for $T(n) \in O(\log_{2} n)$, $\exists$ constants $c_1$ and $c_2$ as well as $n_0$ such that $T(n) \leq c_1 * (\log_{5} n) \forall n\geq n_0$**
 **and**
-**$(\log_{5} n) \leq c_2 * (\log_{2} n) \forall n\geq n_0$**
+**$T(n) \leq c_2 * (\log_{2} n) \forall n\geq n_0$**
+
+**For the first condition, $T(n) \leq c_1 * (\log_{5} n) \forall n\geq n_0$ , we can use the log base change formula, which is $\log_{a} b = (\log_{c} b)/(\log_{c} a)$ to get that $\log_{5} n = (\log_{2} n)/(\log_{2} 5)$**
+
+**We know that $\log_{2} 5$ is a constant, so we can let $c_1$ = $(c')/(\log_{2} 5)$ and we can let $n_0 = n'_0$, and this makes the first inequality true.**
+
+
+
+
 
 **In the first inequality $(\log_{2} n) \leq c_1 * (\log_{5} n)$ we can take the log of both sides and then simplify to get:**
 
